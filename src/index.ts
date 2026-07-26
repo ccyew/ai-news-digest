@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { FEEDS } from "./feeds.js";
 import { fetchArticleText, generateAiSummary } from "./summarize.js";
 import { buildHtmlPage, buildArchiveIndexPage } from "./site.js";
+import { sendDigestEmail } from "./email.js";
 import type { NewsItem } from "./types.js";
 
 const HOURS_WINDOW = 24;
@@ -228,6 +229,9 @@ async function main() {
 
   await writeSitePages(recentItems, now);
   console.log(`Site pages written to ${DOCS_DIR}`);
+
+  const snapshotPath = path.join(OUTPUT_DIR, "latest-items.json");
+  await writeFile(snapshotPath, JSON.stringify({ generatedAt: now.toISOString(), items: recentItems }), "utf-8");
 }
 
 main().catch((err) => {

@@ -1,12 +1,12 @@
 # AI News Digest — 2026-07-26
 
-Covering the last 24 hours across TechCrunch AI, The Verge AI, and Hacker News AI. Generated 2026-07-26T05:24:13.267Z.
+Covering the last 24 hours across TechCrunch AI, The Verge AI, and Hacker News AI. Generated 2026-07-26T13:16:51.613Z.
 
 ## 1. Monday.com is the latest tech company to blame AI for layoffs — here are 20 others
 
 **Source:** TechCrunch AI | **Published:** 2026-07-26 01:30 UTC
 
-Monday.com disclosed in an SEC filing that it will cut roughly 20% of its workforce — just over 600 employees — in a restructuring tied to its AI-driven growth strategy, incurring $45–55 million in net charges while still forecasting up to 20% revenue growth in 2026. Co-founder Eran Zinman said the cuts weren't about reducing costs or replacing people with AI, but about aligning with the company's AI-first vision. The move follows a broader trend: Financial Times analysis found U.S. tech firms have eliminated nearly 140,000 jobs this year — with Amazon, Oracle, Meta, and Microsoft accounting for almost 50,000 — and that companies citing AI in layoff announcements have underperformed the Nasdaq by nearly 10% over the following 30 trading days.
+Monday.com disclosed in an SEC filing that it will cut about 20% of its workforce — just over 600 employees — in a restructuring tied to its "AI-driven growth strategy," incurring $45M–$55M in net charges while still projecting up to 20% revenue growth in 2026; co-founder Eran Zinman insisted the cuts weren't about costs or replacing people with AI. It joins at least 20 other tech firms citing AI in 2026 layoffs, including Microsoft (4,800), Oracle (21,000 over 12 months), Meta (8,000, with 7,000 shifted to AI roles), Amazon (16,000), Block (4,000, nearly half its staff), PayPal, Cloudflare, Coinbase, Snap and Intuit. Financial Times analysis counts nearly 140,000 US tech job cuts this year and found companies blaming AI underperformed the Nasd
 
 [Read more](https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/)
 
@@ -16,9 +16,7 @@ Monday.com disclosed in an SEC filing that it will cut roughly 20% of its workfo
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 22:51 UTC
 
-AI's near-term labor market effects appear modest, according to a research synthesis: unemployment among the most AI-exposed workers has risen 0.77 percentage points since 2022, slightly less than the 0.85-point rise for the least exposed, and job postings for highly exposed roles like software development are still growing, while firms adopting enterprise AI saw employment grow 10% over two years. The clearest possible signal is among recent graduates, whose unemployment hit 5.6% in early 2026, with studies from Brynjolfsson, Chandar, and Chen showing declining entry-level employment in AI-exposed occupations—though added controls push notable declines to 2024, and confounders like Fed rate hikes, pandemic over-hiring, and remote work complicate attribution.
-
-Productivity results are positive but uneven: a call-center study found 15% overall gains concentrated among novices (30%), GitHub Copilot sped coding
+Research synthesized in this brief finds little evidence so far of AI-driven job losses in aggregate: unemployment among the most AI-exposed workers has risen 0.77 points since 2022, slightly less than the 0.85-point rise among the least exposed, and job postings for software developers are growing faster than average, while firms adopting enterprise AI saw employment grow 10% over two years. The clearest possible AI signal is in entry-level white-collar hiring — new-graduate unemployment hit 5.6% in early 2026, up 1.6 points in three years — though Fed rate hikes, pandemic over-hiring and remote work confound the timing, and Brynjolfsson and coauthors' added controls push notable entry-level declines to 2024. Productivity results are positive but uneven, with gains such as 15% at a call center and 56% faster coding with GitHub Copilot concentrated among less-experienced workers, while AI
 
 [Read more](https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality) | [HN Discussion](https://news.ycombinator.com/item?id=49052570)
 
@@ -28,7 +26,7 @@ Productivity results are positive but uneven: a call-center study found 15% over
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 22:50 UTC
 
-Cloudflare is replacing its blanket "Block AI Bots" toggle with a three-category taxonomy — Search, Agent, and Training — that all customers, including free-tier users, can manage independently, and it is urging bot operators to split multi-purpose crawlers into separate agents for transparency. Starting September 15, 2026, new domains will block Training and Agent bots by default on ad-displaying pages while allowing Search, and multi-purpose crawlers like Googlebot, Applebot, and Bingbot will be blocked for customers blocking Training unless they opt out beforehand. Cloudflare also launched BotBase, a searchable directory of tracked bots for Enterprise Bot Management customers, and a new optional robots.txt "use" content signal with values of immediate, reference (default), or full to indicate how crawled content may be stored and reshared.
+Cloudflare is replacing its blanket "Block AI Bots" toggle with granular controls that classify automated traffic into three categories — Search, Agent, and Training — available to all customers including the free tier, and it's urging bot operators to split multi-purpose crawlers for transparency. Starting September 15, 2026, new domains will block Training and Agent bots by default on ad-displaying pages while allowing Search, and multi-purpose crawlers like Googlebot, Applebot, and Bingbot will be blocked for customers blocking Training unless they opt out. Cloudflare also launched BotBase, a searchable database of tracked bots for Enterprise Bot Management customers, and is testing a new "use" field (immediate/reference/full) in Content Signals within robots.txt to signal how crawlers may store and reuse content, with verified status revoked for bots that abuse it.
 
 [Read more](https://blog.cloudflare.com/content-independence-day-ai-options/) | [HN Discussion](https://news.ycombinator.com/item?id=49052564)
 
@@ -38,7 +36,7 @@ Cloudflare is replacing its blanket "Block AI Bots" toggle with a three-category
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 21:18 UTC
 
-John Gruber highlights an essay by Nikhil Suresh arguing that corporate AI enthusiasm has become a self-reinforcing orthodoxy in which dissent is professionally dangerous. Suresh recounts a Fortune 500 executive explaining that vendors won't challenge customers' inflated claims of "100× productivity" gains because contradicting a client's executive could be seen as heresy and cost the company its enterprise contract. Gruber adds that generative AI feels revolutionary particularly to non-technical managers encountering computers as creative tools for the first time, producing a religious fervor that overstates AI's real—though genuine—utility by orders of magnitude.
+John Gruber highlights an essay by Nikhil Suresh arguing that corporate enthusiasm for AI has become a kind of religious fervor that suppresses dissent. Suresh recounts an anonymous Fortune 500 executive explaining that vendors won't challenge customers' inflated claims of "100× productivity" gains because contradicting a client's executive would be treated as heresy and could cost them enterprise contracts. Gruber adds that generative AI feels like magic particularly to non-technical managers encountering computers as creative tools for the first time, making them impossible to persuade that the technology is far less transformative than they believe—at least until the bubble bursts.
 
 [Read more](https://daringfireball.net/linked/2026/07/25/ai-mania-nikhil-suresh) | [HN Discussion](https://news.ycombinator.com/item?id=49051692)
 
@@ -48,7 +46,7 @@ John Gruber highlights an essay by Nikhil Suresh arguing that corporate AI enthu
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 17:01 UTC
 
-A developer shared a system prompt designed to strip anthropomorphic conversational behavior from LLMs, targeting filler phrases, evaluative acknowledgments ("great question!", "you're absolutely right!"), deferential hedging, and closing offers to do more work. The prompt also instructs models to avoid first-person pronouns and describe themselves in computational terms ("This model predicted the bug is here" instead of "I think"), aiming for CLI-like directness. The author notes it was developed through iteration without formal evals, so token efficiency and effectiveness remain untested.
+A developer shared a system prompt designed to strip anthropomorphic conversational habits from LLM output, targeting filler and flattery like "great question!", "hmm, let me think", and "you're absolutely right!", along with rhetorical questions and closing offers to do more work. The prompt instructs the model to respond in a neutral, CLI-like technical register, end replies with factual status statements rather than solicitations for next steps, and avoid first-person pronouns in favor of phrasings such as "this model predicted" or "high prediction confidence." The author notes it was refined over a few iterations without formal evals, so token efficiency could likely be improved.
 
 [Read more](https://swiftrocks.com/a-system-prompt-to-get-ai-to-stop-pretending-to-be-human) | [HN Discussion](https://news.ycombinator.com/item?id=49049304)
 
@@ -58,7 +56,7 @@ A developer shared a system prompt designed to strip anthropomorphic conversatio
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 16:55 UTC
 
-On July 17, 2026, an opinion piece argues Apple has quietly become the leader in practical AI because near-frontier open-weight models—Qwen 3.5, DeepSeek V4, MiniMax M3, GLM-5.2, and Moonshot's ~2.8T-parameter Kimi K3 (weights due July 27)—are commoditizing intelligence, shifting the bottleneck from compute to memory. The author contends Apple's unified-memory Mac Studio (up to 512GB for ~$9,500, ~200-270W, chainable via Thunderbolt 5 with MLX and EXO's RDMA support) vastly undercuts NVIDIA's 96GB RTX Pro 6000 Blackwell (now $13,250, no NVLink), which would need five or six cards and ~3kW to match. He warns NVIDIA's $5T valuation depends on permanently centralized inference,
+Apple's unified memory architecture makes Macs a far more viable platform for running large open-weight AI models locally than NVIDIA hardware, this opinion piece argues, noting that a $9,500 512GB Mac Studio can hold a 4-bit quantized frontier model while NVIDIA's $13,250 RTX Pro 6000 Blackwell caps out at 96GB and lacks NVLink on workstation cards. The argument rests on a rapid cadence of near-frontier open-weight releases — including DeepSeek V4, GLM-5.2, MiniMax M3 and Moonshot's ~2.8T-parameter Kimi K3, with weights promised July 27 — that push inference toward local hardware. It also flags stress signals in the datacenter buildout: hyperscaler 2026 capex guidance of $635–690B, capex growing 46% faster than related revenue, B200 rental prices down
 
 [Read more](https://limitededitionjonathan.substack.com/p/apple-is-the-king-of-ai-and-nobody) | [HN Discussion](https://news.ycombinator.com/item?id=49049241)
 
@@ -68,7 +66,7 @@ On July 17, 2026, an opinion piece argues Apple has quietly become the leader in
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 16:31 UTC
 
-Discussion on Hacker News — 67 points, 43 comments.
+Discussion on Hacker News — 68 points, 45 comments.
 
 [Read more](https://www.youtube.com/watch?v=wlYa8NV5k-U) | [HN Discussion](https://news.ycombinator.com/item?id=49048996)
 
@@ -78,7 +76,7 @@ Discussion on Hacker News — 67 points, 43 comments.
 
 **Source:** TechCrunch AI | **Published:** 2026-07-25 16:00 UTC
 
-Public librarians in the US are drawing unusually large crowds with "Avoiding AI" workshops that explain how consumer AI tools work and walk attendees step-by-step through disabling features like Apple Intelligence and Google Gemini. Hannah Cyrus of Bangor Public Library in Maine pioneered the format after fielding repeated patron questions about switching AI off; her first sessions drew roughly 70 attendees each, versus about a dozen for typical tech classes, and dozens of librarians worldwide contacted her for materials. Charlie Bailey replicated the workshop in South Philadelphia, where a library Instagram post drew over 2,000 likes and registration overflow forced a second session — organizers frame the effort as digital literacy and user autonomy rather than blanket rejection of AI.
+Public librarians in the US are drawing unusually large crowds to free "Avoiding AI" workshops that explain how consumer AI tools work and walk attendees step-by-step through disabling features like Apple Intelligence and Google's Gemini. Bangor Public Library's Hannah Cyrus started the format and had to cap registration at 30 and add a Zoom stream, reaching roughly 70 attendees per session; after she published a journal article about it, dozens of librarians worldwide requested her materials, including Charlie Bailey in South Philadelphia, whose event promo drew over 2,000 Instagram likes and forced a second session. Organizers frame the effort as digital literacy and user autonomy rather than blanket technology rejection, citing frustration over forced AI adoption, environmental concerns, and Big Tech's outsized influence.
 
 [Read more](https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech/)
 
@@ -88,7 +86,7 @@ Public librarians in the US are drawing unusually large crowds with "Avoiding AI
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 14:49 UTC
 
-Mesosphere co-founder Florian Leibert argues that open-weight AI models are becoming a neutral platform for ecosystem innovation, much as Kubernetes did in cloud-native computing, citing Hugging Face's 2M+ public models, an open serving stack (vLLM, SGLang, llama.cpp, Ollama), and Chinese releases like Z.ai's MIT-licensed GLM-5.2 and Moonshot's Kimi K3 that now rival closed frontier models on coding benchmarks. He warns that the Trump administration's reported plan to restrict Chinese open-weight models would lock out US developers while the rest of the world keeps building — noting Chinese models made up 41% of Hugging Face downloads in the past year. Instead, he urges American labs to release frontier-grade open weights under permissive licenses, use federal procurement to favor portable systems, build out the surrounding stack,
+Mesosphere co-founder Florian Leibert argues that open-weight AI models are becoming a neutral platform for ecosystem innovation, much as Kubernetes did in cloud infrastructure, citing 2M+ public models on Hugging Face and Chinese models accounting for 41% of downloads over the past year. He points to Z.ai's MIT-licensed GLM-5.2 (reportedly 62.1% on SWE-bench Pro vs. 58.6% for GPT-5.5) and Moonshot's Kimi K3 as evidence the frontier gap is closing. He urges the Trump administration to drop reported plans to restrict Chinese open-weight models, and instead push US labs to release frontier open models, use federal procurement to favor portable systems, and create an independent standards body for safety testing.
 
 [Read more](https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/) | [HN Discussion](https://news.ycombinator.com/item?id=49048034)
 
@@ -98,7 +96,7 @@ Mesosphere co-founder Florian Leibert argues that open-weight AI models are beco
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 14:41 UTC
 
-Anthropic's own March analysis found "no systematic increase in unemployment for highly exposed workers since late 2022," with Claude handling just 33% of computer and math tasks versus a theoretical near-100%, undercutting CEO Dario Amodei's warning that AI could eliminate half of entry-level jobs within one to five years. Labor productivity growth has actually been slower in the first three years of the AI era than during the mid-1990s IT boom, and Sam Altman has publicly backed away from "jobs apocalypse" rhetoric, while the Nasdaq has fallen roughly 8% from its early-June peak. Economists cite unresolved economics — massive depreciation on models, datacenter power demand projected to more than double to 945 TWh by 2030, and 70% of Americans opposing local datacenters — as reasons AI may not deliver at a price society will accept.
+Anthropic's own March analysis found "no systematic increase in unemployment for highly exposed workers since late 2022," with Claude handling just 33% of computer and math tasks despite theoretical capacity for nearly all of them — undercutting CEO Dario Amodei's warning that AI could eliminate half of entry-level jobs within one to five years. Labor productivity growth has been slower in the first three years of the AI era than during the mid-1990s IT boom, and Sam Altman has publicly backed away from "jobs apocalypse" predictions, while the Nasdaq has fallen roughly 8% from its early-June peak. Skeptics including MIT's David Autor and Daron Acemoglu point to unresolved economics — hundreds of billions in annual losses, rapid model depreciation, and datacenter power demand projected to more than double to 945 TWh by 2030 — plus public opposition, with 7 in 10
 
 [Read more](https://www.theguardian.com/technology/2026/jul/25/ai-jobs-apocalypse-human-labor) | [HN Discussion](https://news.ycombinator.com/item?id=49047969)
 
@@ -108,7 +106,7 @@ Anthropic's own March analysis found "no systematic increase in unemployment for
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 13:43 UTC
 
-Open Markets Institute fellow Matt Scherer argues that generative AI's apparent productivity gains are illusory, distinguishing between colloquial productivity (more output, faster) and economic total factor productivity (value of outputs relative to inputs). He contends AI's error-proneness — fabricated case law, deleted code, incorrect diagnoses — degrades output quality while raising quality-control costs, and that the $1.5 trillion AI infrastructure build-out sets a high bar for breaking even. He cites data showing monthly app releases nearly doubled while apps with significant usage declined, and warns of negative-value use cases like AI-enabled cyberattacks, fraudulent job candidates, and "workslop."
+Open Markets Institute fellow Matt Scherer argues that generative AI's apparent productivity gains are illusory, distinguishing between colloquial productivity (more output, faster) and economic total factor productivity, which weighs the value of outputs against inputs. He contends that AI's error-proneness — fabricated case law, deleted code, incorrect diagnoses — degrades output quality while raising quality-control costs, and that the $1.5 trillion AI infrastructure build-out sets a high bar for breaking even. He points to app development, where AI has nearly doubled monthly releases even as the number of apps with significant usage declines, plus AI-enabled cyberattacks and "workslop," as evidence AI may be destroying as much value as it creates.
 
 [Read more](https://www.hardresetmedia.com/p/the-ai-productivity-illusion) | [HN Discussion](https://news.ycombinator.com/item?id=49047526)
 
@@ -118,18 +116,8 @@ Open Markets Institute fellow Matt Scherer argues that generative AI's apparent 
 
 **Source:** Hacker News AI | **Published:** 2026-07-25 13:33 UTC
 
-Discussion on Hacker News — 60 points, 80 comments.
+Discussion on Hacker News — 63 points, 82 comments.
 
 [Read more](https://www.wsj.com/business/china-us-ai-model-costs-53a12e96) | [HN Discussion](https://news.ycombinator.com/item?id=49047448)
-
----
-
-## 13. One fallen power line exposed a growing AI data center problem. Here’s how to fix it.
-
-**Source:** TechCrunch AI | **Published:** 2026-07-25 13:05 UTC
-
-A downed power line near Washington, DC triggered roughly 3.1 GW of Northern Virginia data centers — about 3% of PJM's load — to switch to backup power within 30 seconds, spiking voltage across the grid from Virginia to Chicago and causing lights to flicker; the grid took over 11 minutes to stabilize instead of seconds. The incident was twice the size of a similar 2024 PJM event involving 60 data centers and 1.5 GW, raising concerns as data centers are projected to grow from about 6% to 24% of PJM demand by 2040. Proposed fixes include staggered disconnect/reconnect sequencing, ERCOT-style "ride-through" requirements, and campus-scale battery-backed UPS systems like those from ON.Energy, which is installing 3 GW across four data center campuses.
-
-[Read more](https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/)
 
 ---
