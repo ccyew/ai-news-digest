@@ -16,3 +16,4 @@ Output: `output/ai-news-digest-YYYY-MM-DD.md`
 - TechCrunch AI — https://techcrunch.com/category/artificial-intelligence/feed/
 - The Verge AI — https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
 - Hacker News AI — https://hnrss.org/newest?q=AI&points=20 (HN stories mentioning "AI" with 20+ points)
+test
