@@ -16,4 +16,7 @@ Output: `output/ai-news-digest-YYYY-MM-DD.md`
 - TechCrunch AI — https://techcrunch.com/category/artificial-intelligence/feed/
 - The Verge AI — https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
 - Hacker News AI — https://hnrss.org/newest?q=AI&points=20 (HN stories mentioning "AI" with 20+ points)
-test
+
+## Public site
+
+Published via GitHub Pages at https://ccyew.github.io/ai-news-digest/ — the `digest` script writes `docs/index.html` and `docs/archive/`, and the daily scheduled job commits and pushes them automatically.
