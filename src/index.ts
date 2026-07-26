@@ -12,6 +12,8 @@ import type { NewsItem } from "./types.js";
 const HOURS_WINDOW = 24;
 const SUMMARY_MAX_LEN = 280;
 const HN_SOURCE_NAME = "Hacker News AI";
+const FEED_RETRY_ATTEMPTS = 3;
+const FEED_RETRY_BASE_DELAY_MS = 2000;
 const OUTPUT_DIR = fileURLToPath(new URL("../output/", import.meta.url));
 const DOCS_DIR = fileURLToPath(new URL("../docs/", import.meta.url));
 const ARCHIVE_DIR = path.join(DOCS_DIR, "archive");
@@ -50,10 +52,35 @@ function parseHnMeta(raw: string): { discussionUrl?: string; fallbackSummary: st
   };
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function parseFeedWithRetry(name: string, url: string): Promise<Parser.Output<Record<string, unknown>>> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= FEED_RETRY_ATTEMPTS; attempt++) {
+    try {
+      return await parser.parseURL(url);
+    } catch (err) {
+      lastError = err;
+      const isLastAttempt = attempt === FEED_RETRY_ATTEMPTS;
+      console.error(
+        `Attempt ${attempt}/${FEED_RETRY_ATTEMPTS} failed for "${name}" (${url}): ${(err as Error).message}${
+          isLastAttempt ? "" : " — retrying..."
+        }`
+      );
+      if (!isLastAttempt) {
+        await sleep(FEED_RETRY_BASE_DELAY_MS * attempt);
+      }
+    }
+  }
+  throw lastError;
+}
+
 async function fetchFeed(name: string, url: string): Promise<NewsItem[]> {
   try {
-    const feed = await parser.parseURL(url);
-    return (feed.items ?? []).flatMap((item) => {
+    const feed = await parseFeedWithRetry(name, url);
+    const items = (feed.items ?? []).flatMap((item): NewsItem[] => {
       const dateStr = item.isoDate ?? item.pubDate;
       if (!item.title || !item.link || !dateStr) return [];
       const publishedAt = new Date(dateStr);
@@ -88,8 +115,16 @@ async function fetchFeed(name: string, url: string): Promise<NewsItem[]> {
         },
       ];
     });
+
+    if (items.length === 0) {
+      console.warn(`WARNING: "${name}" returned 0 usable items — feed may have changed shape or is temporarily empty.`);
+    }
+
+    return items;
   } catch (err) {
-    console.error(`Failed to fetch "${name}" (${url}):`, (err as Error).message);
+    console.error(
+      `WARNING: Failed to fetch "${name}" (${url}) after ${FEED_RETRY_ATTEMPTS} attempts: ${(err as Error).message}. This source will be missing from today's digest.`
+    );
     return [];
   }
 }
@@ -175,6 +210,9 @@ async function main() {
     .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
 
   console.log(`Fetched ${allItems.length} total items, ${recentItems.length} within last ${HOURS_WINDOW}h.`);
+
+  const breakdown = FEEDS.map((f) => `${f.name}=${recentItems.filter((i) => i.source === f.name).length}`).join(", ");
+  console.log(`Source breakdown (last ${HOURS_WINDOW}h): ${breakdown}`);
 
   console.log("Fetching full articles and generating AI summaries...");
   await enrichSummariesWithAi(recentItems);
